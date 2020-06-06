@@ -14,15 +14,19 @@ const useStyles = makeStyles(theme => ({
       fontSize: '2.4rem'
     }
   },
+  appBar: {
+    boxShadow: 'none'
+  },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: '1.6rem',
+    marginLeft: '8rem'
   },
   title: {
     flexGrow: 1,
     fontSize: '1.6rem'
   },
   actionBtns: {
-    marginRight: '1rem'
+    marginRight: '13rem'
   },
   navBtn: {
     fontSize: '1.4rem'
@@ -34,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar color="transparent" position="static">
+      <AppBar className={classes.appBar} color="transparent" position="fixed">
         <Toolbar>
           <IconButton
             edge="start"
