@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Home from '@material-ui/icons/Home';
-import { HashLink as Link } from 'react-router-hash-link';
+import { ScrollToComponent } from '../utils/scrollToComponent';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,11 +37,6 @@ const useStyles = makeStyles(theme => ({
 const Navbar = props => {
   const classes = useStyles();
 
-  const scrollToProjects = () => {
-    const anchor = document.querySelector('#scrollTo');
-    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} color="transparent" position="fixed">
@@ -62,7 +57,7 @@ const Navbar = props => {
               About
             </Button>
             <Button
-              onClick={scrollToProjects}
+              onClick={ScrollToComponent}
               className={classes.navBtn}
               size="medium"
               color="inherit"
