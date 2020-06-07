@@ -1,20 +1,30 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
+import ProjectCards from './ProjectCards';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '125rem',
+    margin: '0 0 10rem 0',
+    position: 'relative',
+    left: '11rem'
+  },
+  title: {
+    fontSize: '2.5rem',
+    marginTop: '3rem'
+  }
+}));
 
 const Projects = () => {
+  const classes = useStyles();
   return (
-    <div
-      id="scrollTo"
-      style={{
-        background: 'blue',
-        border: '1px solid grey',
-        width: 300,
-        height: 300,
-        marginTop: '400px',
-        marginBottom: '200px'
-      }}
-    >
-      <h1>This is a project.</h1>
-    </div>
+    <Container size="md" id="scrollTo" className={classes.root}>
+      <h1 className={classes.title}>Projects</h1>
+      <ProjectCards />
+    </Container>
   );
 };
 
