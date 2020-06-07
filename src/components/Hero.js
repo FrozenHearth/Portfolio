@@ -8,7 +8,8 @@ const useStyles = makeStyles(theme => ({
   heroContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    marginTop: '10rem'
+    marginTop: '10rem',
+    marginBottom: '18rem'
   },
   heroMessagesContainer: {
     display: 'flex',
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     top: '12.5rem',
     height: '25rem',
-    left: '1.6rem'
+    left: '3.6rem'
   },
   heroBanner: {
     height: '40rem',
