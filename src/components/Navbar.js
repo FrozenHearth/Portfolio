@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -18,16 +18,21 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     boxShadow: 'none'
   },
+  appBarShadow: {
+    boxShadow: '0 1px 6px 0 rgba(32, 33, 36, 0.28)',
+    zIndex: 2,
+    background: '#fff'
+  },
   menuButton: {
     marginRight: '1.6rem',
-    marginLeft: '8rem'
+    marginLeft: '7.5rem'
   },
   title: {
     flexGrow: 1,
     fontSize: '1.6rem'
   },
   actionBtns: {
-    marginRight: '12rem'
+    marginRight: '11.5rem'
   },
   navBtn: {
     fontSize: '1.4rem'
@@ -37,9 +42,32 @@ const useStyles = makeStyles(theme => ({
 const Navbar = props => {
   const classes = useStyles();
 
+  const [scrollCheck, setScroll] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        if (!scrollCheck) {
+          setScroll('isScrolling');
+        }
+      } else {
+        if (scrollCheck) {
+          setScroll('');
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+  }, [scrollCheck]);
+
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar} color="transparent" position="fixed">
+      <AppBar
+        className={
+          scrollCheck === '' ? `${classes.appBar}` : `${classes.appBarShadow}`
+        }
+        color="transparent"
+        position="fixed"
+      >
         <Toolbar>
           <IconButton
             edge="start"
