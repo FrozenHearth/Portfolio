@@ -1,1 +1,1 @@
-Built with React (Hooks + Context API), React-Router & Material-UI.
+Built with React (Hooks), React-Router & Material-UI.
