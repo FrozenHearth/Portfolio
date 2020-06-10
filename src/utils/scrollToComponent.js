@@ -1,4 +1,4 @@
-export const ScrollToComponent = () => {
-  const anchor = document.querySelector('#scrollTo');
+export const ScrollToComponent = id => {
+  const anchor = document.querySelector(id);
   anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
