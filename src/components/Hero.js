@@ -7,7 +7,6 @@ import CloudDownload from '@material-ui/icons/CloudDownload';
 const useStyles = makeStyles(theme => ({
   heroContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
     marginTop: '10rem',
     marginBottom: '12rem'
   },
@@ -15,21 +14,30 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    top: '12.5rem',
+    top: '5.5rem',
     height: '25rem',
     left: '3.6rem'
   },
   heroBanner: {
     height: '40rem',
-    width: '60rem'
+    width: '60rem',
+    marginLeft: 'auto'
   },
   heroMessageTitle: {
-    fontWeight: 500
+    fontWeight: 300,
+    fontSize: '9rem'
   },
   heroMessageSubtitle: {
     color: theme.palette.text.secondary,
     fontWeight: 400,
-    marginTop: '1.6rem'
+    marginTop: '3.6rem',
+    marginLeft: '0.5rem'
+  },
+  heroMessageSubtitle2: {
+    marginTop: '3rem',
+    marginLeft: '0.5rem',
+    fontSize: '1.8rem',
+    color: '#757575'
   },
   heroBtn: {
     fontSize: '1.4rem',
@@ -37,7 +45,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     width: '12rem',
     borderRadius: '2px',
-    marginTop: '2rem',
+    marginTop: '3.6rem',
+    marginLeft: '0.5rem',
+
     '&:hover': {
       background: theme.palette.info.dark
     }
@@ -65,10 +75,19 @@ const Hero = () => {
         </Typography>
         <Typography
           className={classes.heroMessageSubtitle}
-          variant="h2"
-          component="h2"
+          variant="h4"
+          gutterBottom
+          component="h4"
         >
-          I'm Vishwanath, and I'm a software development engineer.
+          I am{' '}
+          <span style={{ color: '#000', fontWeight: 600 }}>Vishwanath.</span>
+        </Typography>
+        <Typography
+          className={classes.heroMessageSubtitle2}
+          variant="h5"
+          component="h5"
+        >
+          I am a MS CS grad, and a software development engineer.
         </Typography>
         <a
           className={classes.btnLink}
