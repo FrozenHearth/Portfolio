@@ -9,6 +9,10 @@ import Home from '@material-ui/icons/Home';
 import { ScrollToComponent } from '../utils/scrollToComponent';
 
 const useStyles = makeStyles(theme => ({
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
   root: {
     flexGrow: 1,
     '& .MuiSvgIcon-root': {
@@ -68,7 +72,7 @@ const Navbar = props => {
         color="transparent"
         position="fixed"
       >
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             size="medium"
@@ -78,9 +82,6 @@ const Navbar = props => {
           >
             <Home />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            Vishwanath BV
-          </Typography>
           <div className={classes.actionBtns}>
             <Button className={classes.navBtn} size="medium" color="inherit">
               About

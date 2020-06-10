@@ -63,7 +63,7 @@ const Projects = () => {
 
   return (
     <Container id="scrollToProjects" size="md" className={classes.root}>
-      <h1 className={classes.title}>Projects</h1>
+      <h1 className={classes.title}>My Work</h1>
       {repos.length > 0 ? <ProjectCards repos={repos} /> : ''}
     </Container>
   );
