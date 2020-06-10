@@ -62,7 +62,7 @@ const Projects = () => {
   }, [token]);
 
   return (
-    <Container size="md" id="scrollTo" className={classes.root}>
+    <Container id="scrollToProjects" size="md" className={classes.root}>
       <h1 className={classes.title}>Projects</h1>
       {repos.length > 0 ? <ProjectCards repos={repos} /> : ''}
     </Container>

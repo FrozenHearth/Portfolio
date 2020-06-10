@@ -74,6 +74,7 @@ const Navbar = props => {
             size="medium"
             className={classes.menuButton}
             color="inherit"
+            onClick={() => ScrollToComponent('#scrollToHero')}
           >
             <Home />
           </IconButton>
@@ -85,7 +86,7 @@ const Navbar = props => {
               About
             </Button>
             <Button
-              onClick={ScrollToComponent}
+              onClick={() => ScrollToComponent('#scrollToProjects')}
               className={classes.navBtn}
               size="medium"
               color="inherit"

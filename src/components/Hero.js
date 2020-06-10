@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'flex-end',
     marginTop: '10rem',
-    marginBottom: '18rem'
+    marginBottom: '12rem'
   },
   heroMessagesContainer: {
     display: 'flex',
@@ -50,7 +50,11 @@ const useStyles = makeStyles(theme => ({
 const Hero = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.heroContainer} maxWidth="lg">
+    <Container
+      id="scrollToHero"
+      className={classes.heroContainer}
+      maxWidth="lg"
+    >
       <div className={classes.heroMessagesContainer}>
         <Typography
           className={classes.heroMessageTitle}
