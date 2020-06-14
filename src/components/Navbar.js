@@ -1,8 +1,7 @@
-import React, { useRef, useLayoutEffect, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Home from '@material-ui/icons/Home';
@@ -25,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   appBarShadow: {
     boxShadow: '0 1px 6px 0 rgba(32, 33, 36, 0.28)',
     zIndex: 2,
-    background: 'rgba(255, 255, 255, 0.6)'
+    background: '#fff'
   },
   menuButton: {
     marginRight: '5rem',
@@ -83,8 +82,16 @@ const Navbar = props => {
             <Home />
           </IconButton>
           <div className={classes.actionBtns}>
-            <Button className={classes.navBtn} size="medium" color="inherit">
+            <Button
+              onClick={() => ScrollToComponent('#scrollToAboutMe')}
+              className={classes.navBtn}
+              size="medium"
+              color="inherit"
+            >
               About
+            </Button>
+            <Button className={classes.navBtn} size="medium" color="inherit">
+              Skills
             </Button>
             <Button
               onClick={() => ScrollToComponent('#scrollToProjects')}

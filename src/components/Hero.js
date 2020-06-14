@@ -87,7 +87,8 @@ const Hero = () => {
           variant="h5"
           component="h5"
         >
-          I am a MS CS grad, and a software development engineer.
+          I am a MS CS grad, and a software development engineer, with a passion
+          for building beautiful UIs.
         </Typography>
         <a
           className={classes.btnLink}
