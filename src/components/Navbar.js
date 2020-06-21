@@ -90,9 +90,6 @@ const Navbar = props => {
             >
               About
             </Button>
-            <Button className={classes.navBtn} size="medium" color="inherit">
-              Skills
-            </Button>
             <Button
               onClick={() => ScrollToComponent('#scrollToProjects')}
               className={classes.navBtn}
@@ -101,6 +98,15 @@ const Navbar = props => {
             >
               Projects
             </Button>
+            <Button
+              onClick={() => ScrollToComponent('#scrollToSkills')}
+              className={classes.navBtn}
+              size="medium"
+              color="inherit"
+            >
+              Skills
+            </Button>
+
             <Button className={classes.navBtn} size="medium" color="inherit">
               Contact
             </Button>
