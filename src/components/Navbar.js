@@ -6,43 +6,57 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Home from '@material-ui/icons/Home';
 import { ScrollToComponent } from '../utils/scrollToComponent';
+import Box from '@material-ui/core/Box';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   toolbar: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   root: {
     flexGrow: 1,
     '& .MuiSvgIcon-root': {
-      fontSize: '2.4rem'
-    }
+      fontSize: '2.4rem',
+    },
   },
   appBar: {
-    boxShadow: 'none'
+    boxShadow: 'none',
   },
   appBarShadow: {
     boxShadow: '0 1px 6px 0 rgba(32, 33, 36, 0.28)',
     zIndex: 2,
-    background: '#fff'
+    background: '#fff',
   },
   menuButton: {
     marginRight: '5rem',
-    marginLeft: '1.5rem'
+    marginLeft: '1.5rem',
   },
   title: {
     flexGrow: 1,
-    fontSize: '1.6rem'
+    fontSize: '1.6rem',
   },
   actionBtns: {
-    marginRight: '11.5rem'
+    marginRight: '11.5rem',
+    display: 'flex',
+    alignItems: 'center',
   },
   navBtn: {
-    fontSize: '1.4rem'
-  }
+    fontSize: '1.4rem',
+  },
+  contactIconButtons: {
+    minWidth: '30px',
+  },
+  noUnderline: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
 }));
 
-const Navbar = props => {
+const Navbar = (props) => {
   const classes = useStyles();
 
   const [scrollCheck, setScroll] = useState('');
@@ -106,10 +120,46 @@ const Navbar = props => {
             >
               Skills
             </Button>
-
-            <Button className={classes.navBtn} size="medium" color="inherit">
-              Contact
-            </Button>
+            <Box display="flex">
+              <Button className={classes.contactIconButtons}>
+                <a
+                  className={classes.noUnderline}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/vishwanath-bhetanabhotla-18885b143/"
+                >
+                  <LinkedInIcon />
+                </a>
+              </Button>
+              <Button className={classes.contactIconButtons}>
+                <a
+                  className={classes.noUnderline}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/FrozenHearth"
+                >
+                  <GitHubIcon />
+                </a>
+              </Button>
+              <Button className={classes.contactIconButtons}>
+                <a
+                  className={classes.noUnderline}
+                  href="mailto:vishu.dbz@gmail.com"
+                >
+                  <EmailIcon />
+                </a>
+              </Button>
+              <Button className={classes.contactIconButtons}>
+                <a
+                  className={classes.noUnderline}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://twitter.com/FrozenInRetro"
+                >
+                  <TwitterIcon />
+                </a>
+              </Button>
+            </Box>
           </div>
         </Toolbar>
       </AppBar>

@@ -4,11 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import HeroBanner from '../assets/images/hero_illus.png';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   heroContainer: {
     display: 'flex',
     marginTop: '10rem',
-    marginBottom: '12rem'
+    marginBottom: '12rem',
   },
   heroMessagesContainer: {
     display: 'flex',
@@ -16,28 +16,30 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     top: '5.5rem',
     height: '25rem',
-    left: '3.6rem'
+    left: '3.6rem',
   },
   heroBanner: {
-    height: '40rem',
-    width: '60rem',
-    marginLeft: 'auto'
+    height: '55rem',
+    width: '80rem',
+    marginTop: '-8rem',
+    position: 'relative',
+    left: '5rem',
   },
   heroMessageTitle: {
     fontWeight: 300,
-    fontSize: '9rem'
+    fontSize: '9rem',
   },
   heroMessageSubtitle: {
     color: theme.palette.text.secondary,
     fontWeight: 400,
     marginTop: '3.6rem',
-    marginLeft: '0.5rem'
+    marginLeft: '0.5rem',
   },
   heroMessageSubtitle2: {
     marginTop: '3rem',
     marginLeft: '0.5rem',
     fontSize: '1.8rem',
-    color: '#757575'
+    color: '#757575',
   },
   heroBtn: {
     fontSize: '1.4rem',
@@ -49,12 +51,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '0.5rem',
 
     '&:hover': {
-      background: theme.palette.info.dark
-    }
+      background: theme.palette.info.dark,
+    },
   },
   btnLink: {
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 }));
 
 const Hero = () => {
